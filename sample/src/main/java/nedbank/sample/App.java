@@ -1,7 +1,7 @@
 package nedbank.sample;
 
 /**
- * Hello world!
+ * Hello world! This is to generate code
  *
  */
 public class App 
