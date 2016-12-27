@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Jana (Distribution 
+	Reference Model (DRM-W) Project) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:filelog="http://contracts.it.nednet.co.za/data/esm/Event/FileEvent/v1"
+	xmlns:evlog="http://contracts.it.nednet.co.za/data/esm/Event"
+	targetNamespace="http://contracts.it.nednet.co.za/data/esm/Event/FileEvent/v1">
+	<xs:import namespace="http://contracts.it.nednet.co.za/data/esm/Event"
+		schemaLocation="../Event/Event_v1.xsd" />
+
+	<xs:element name="FileEventRq_v1" type="filelog:fileEvent" />
+
+	<xs:complexType name="fileEvent">
+		<xs:complexContent>
+			<xs:extension base="evlog:Event">
+				<xs:sequence>
+					<xs:element name="objectSize" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>file object size</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+
+					<xs:element name="objectAliasIn" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>file alias name</xs:documentation>
+			  			</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+
+								<xs:maxLength value="256" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="objectAliasOut" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>file alias name after renaming
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+
+								<xs:maxLength value="256" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+
+
+					<xs:element name="numberOfItemsInObject" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Total number of transactions in file
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+
+								<xs:maxLength value="15" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+
+					<xs:element name="valueOfItemsInObject" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>This is hash total of destination account
+								numbers and amounts.
+							</xs:documentation>
+						</xs:annotation>
+
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="18" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+
+
+
+</xs:schema>
