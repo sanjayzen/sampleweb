@@ -6,9 +6,11 @@ package nedbank.sample;
  */
 public class App 
 {
+	
+	public String test;
+	
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        h
     }
 }
