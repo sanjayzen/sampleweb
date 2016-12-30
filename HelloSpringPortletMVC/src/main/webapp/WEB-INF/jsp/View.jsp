@@ -2,4 +2,4 @@
 	pageEncoding="ISO-8859-1" session="false"%>
 <%@taglib uri="http://java.sun.com/portlet" prefix="portlet"%>
 <portlet:defineObjects />
-<p>Hello from Spring Portlet MVC Framework - View Mode edited .......sanjay ....</p>
+<p>Hello from Spring Portlet MVC Framework - View Mode edited .......sanjay ....testing again</p>
