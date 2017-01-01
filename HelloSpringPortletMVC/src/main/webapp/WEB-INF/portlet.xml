@@ -8,6 +8,10 @@
 		<portlet-name>HelloSpringPortletMVC</portlet-name>
 		<display-name>Hello World Spring Portlet MVC Framework Portlet</display-name>
 		<portlet-class>	org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/HelloSpringPortletMVC-portlet.xml</value>
+		</init-param>
 		<supports>
 			<mime-type>text/html</mime-type>
 			<portlet-mode>VIEW</portlet-mode>
