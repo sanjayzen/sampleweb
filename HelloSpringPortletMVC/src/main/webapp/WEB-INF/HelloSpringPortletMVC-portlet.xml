@@ -11,15 +11,9 @@
                 	
                 <property name="portletModeMap">
                         <map>
-                                <entry key="view">
-                                	<ref bean="viewController"/>
-                                </entry>
-                                <entry key="edit">
-                                	<ref bean="editController"/>
-                                </entry>
-                                <entry key="help">
-                                	<ref bean="helpController"/>
-                                </entry> 
+                                <entry key="view" value="viewController"/>
+                                <entry key="edit" value="editController"/>
+                                <entry key="help" value="helpController"/>
                         </map>
                 </property> 
      </bean>
