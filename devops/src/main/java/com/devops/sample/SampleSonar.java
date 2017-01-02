@@ -6,6 +6,8 @@ public class SampleSonar {
 	
 	public static String lastName;
 	
+	public static final String city = "Pune";
+	
 	public void print() {
 		System.out.println("This is sample sonar code quality check");
 	}
